@@ -9,7 +9,7 @@ document.getElementById("blog").addEventListener("click", function (event) {
  */
 document.getElementById("back-btn").addEventListener("click", function(event){
     // alert("Clicked")
-    window.location.href = "main.html";
+    window.location.href = "index.html";
 })
 
 const colorButton = document.getElementById('colorChange');
