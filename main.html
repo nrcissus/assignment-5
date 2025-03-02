@@ -1,11 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DevBoard</title>
-</head>
-<body>
-    <h1>Html Created</h1>
-</body>
+    <!--Daisy UI-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!--Style to add Font-->
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body class="poppins-regular bg-blue-200 p-2">
+    <header class="max-h-screen container mx-auto">
+      <!--Nav Bar-->
+      <section
+        class="flex justify-between items-center p-3 bg-white rounded-2xl"
+      >
+        <!--Left-->
+        <div class="flex items-center gap-2">
+          <img src="assets/logo.png" alt="" />
+          <h1 class="text-3xl">Dev<span class="font-bold">Board</span></h1>
+        </div>
+
+        <!--Right-->
+        <div class="flex items-center gap-3">
+          <div class="flex items-center gap-2 bg-blue-200 rounded-xl p-3">
+            <img src="assets/checkbox.png" alt="" />
+            <span class="font-extrabold">23</span>
+          </div>
+
+          <!--Color Wheel-->
+          <div class="bg-blue-200 p-2 rounded-full">
+            <img id="colorChange" src="assets/theme-btn.png" alt="" />
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <!--Dashboard-->
+    <main class="container mx-auto mt-3">
+      <section class="flex gap-5">
+        <!--Left Dash-->
+        <div class="rounded-2xl bg-white p-2">
+          <!--Dash Bar-->
+          <div class="grid grid-cols-3">
+            <div
+              class="dash1 flex gap-2 items-center bg-blue-200 mx-2 my-2 p-3 rounded-2xl"
+            >
+              <div class="bg-white p-2 rounded-full">
+                <img src="assets/checkbox.png" alt="" />
+              </div>
+              <div class="">
+                <h1>Task Assigned</h1>
+                <h1 class="font-medium text-2xl">5</h1>
+              </div>
+            </div>
+            <div
+              id="blog" class="dash2 bg-gradient-to-r from-blue-500 to-blue-200 text-white mx-2 my-2 p-3 rounded-2xl flex items-center gap-2 cursor-pointer"
+            >
+              <img src="assets/board.png" alt="" />
+              <h1>Discover Something New Today !</h1>
+            </div>
+            <div
+              class="dash3 bg-blue-200 mx-2 my-2 p-3 rounded-2xl flex justify-center items-center gap-4"
+            >
+              <div class="bg-white p-2 rounded-full">
+                <img src="assets/calender.png" alt="" />
+              </div>
+              <div>
+                <span>WED, March 3 2025</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="border-b-2 mx-3 border-blue-200 border-dashed my-3"></div>
+
+          <!--Tasks-->
+          <div class="grid grid-cols-3 gap-4 p-2">
+            <!--Task 1-->
+            <div class="bg-blue-200 p-3 rounded-xl hover:bg-blue-300">
+              <h1 class="bg-white p-2 rounded-xl mt-2 w-1/3 text-center">
+                ShopEase
+              </h1>
+              <h1 class="text-2xl mt-3 mb-2">Fix Mobile Button Issue</h1>
+              <p class="bg-white rounded-md p-2 mb-3">
+                Debug using Chrome DevTools, check for overlapping elements, and
+                ensure onClick works properly
+              </p>
+              <div class="flex justify-between items-center">
+                <div>
+                  <span class="text-gray-500">Deadline</span>
+                  <h1 class="font-semibold">21 March 2025</h1>
+                </div>
+                <button class="btn bg-blue-600 text-white rounded-xl border-none hover:bg-blue-400 hover:text-black">
+                  Completed
+                </button>
+              </div>
+            </div>
+            <!--Task 2-->
+            <div class="bg-blue-200 p-3 rounded-xl hover:bg-blue-300">
+              <h1 class="bg-white p-2 rounded-xl mt-2 w-1/3 text-center">
+                CloudSync
+              </h1>
+              <h1 class="text-2xl mt-3 mb-2">Add Dark Mode</h1>
+              <p class="bg-white rounded-md p-2 mb-3">
+                Store the user's preference in localStorage, update CSS
+                variables dynamically.
+              </p>
+              <div class="flex justify-between items-center">
+                <div>
+                  <span class="text-gray-500">Deadline</span>
+                  <h1 class="font-semibold">21 March 2025</h1>
+                </div>
+                <button class="btn bg-blue-600 text-white rounded-xl border-none hover:bg-blue-400 hover:text-black">
+                  Completed
+                </button>
+              </div>
+            </div>
+            <!--Task 3-->
+            <div class="bg-blue-200 p-3 rounded-xl hover:bg-blue-300">
+              <h1 class="bg-white p-2 rounded-xl mt-2 w-1/3 text-center">
+                SwiftPay
+              </h1>
+              <h1 class="text-2xl mt-3 mb-2">Optimize Homepage</h1>
+              <p class="bg-white rounded-md p-2 mb-3">
+                Debug using Chrome DevTools, check for overlapping elements, and
+                ensure onClick works properly
+              </p>
+              <div class="flex justify-between items-center">
+                <div>
+                  <span class="text-gray-500">Deadline</span>
+                  <h1 class="font-semibold">21 March 2025</h1>
+                </div>
+                <button class="btn bg-blue-600 text-white rounded-xl border-none hover:bg-blue-400 hover:text-black">
+                  Completed
+                </button>
+              </div>
+            </div>
+            <!--Task 4-->
+            <div class="bg-blue-200 p-3 rounded-xl hover:bg-blue-300">
+              <h1 class="bg-white p-2 rounded-xl mt-2 w-1/3 text-center">
+                Meta
+              </h1>
+              <h1 class="text-2xl mt-3 mb-2">Add New Emoji 🌺</h1>
+              <p class="bg-white rounded-md p-2 mb-3">
+                Debug using Chrome DevTools, check for overlapping elements, and
+                ensure onClick works properly
+              </p>
+              <div class="flex justify-between items-center">
+                <div>
+                  <span class="text-gray-500">Deadline</span>
+                  <h1 class="font-semibold">21 March 2025</h1>
+                </div>
+                <button class="btn bg-blue-600 text-white rounded-xl border-none hover:bg-blue-400 hover:text-black">
+                  Completed
+                </button>
+              </div>
+            </div>
+            <!--Task 5-->
+            <div class="bg-blue-200 p-3 rounded-xl hover:bg-blue-300">
+              <h1 class="bg-white p-2 rounded-xl mt-2 w-1/3 text-center">
+                Google LLC
+              </h1>
+              <h1 class="text-2xl mt-3 mb-2">Integrate OpenAI API</h1>
+              <p class="bg-white rounded-md p-2 mb-3">
+                Debug using Chrome DevTools, check for overlapping elements, and
+                ensure onClick works properly
+              </p>
+              <div class="flex justify-between items-center">
+                <div>
+                  <span class="text-gray-500">Deadline</span>
+                  <h1 class="font-semibold">21 March 2025</h1>
+                </div>
+                <button class="btn bg-blue-600 text-white rounded-xl border-none hover:bg-blue-400 hover:text-black">
+                  Completed
+                </button>
+              </div>
+            </div>
+            <!--Task 6-->
+            <div class="bg-blue-200 p-3 rounded-xl hover:bg-blue-300">
+              <h1 class="bg-white p-2 rounded-xl mt-2 w-1/3 text-center">
+                GlassDoor
+              </h1>
+              <h1 class="text-2xl mt-3 mb-2">Improve Job Searching</h1>
+              <p class="bg-white rounded-md p-2 mb-3">
+                Debug using Chrome DevTools, check for overlapping elements, and
+                ensure onClick works properly
+              </p>
+              <div class="flex justify-between items-center">
+                <div>
+                  <span class="text-gray-500">Deadline</span>
+                  <h1 class="font-semibold">21 March 2025</h1>
+                </div>
+                <button class="btn bg-blue-600 text-white rounded-xl border-none hover:bg-blue-400 hover:text-black">
+                  Completed
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Right Dash-->
+        <div class="rounded-2xl w-1/3 bg-white">
+          <div class="flex flex-col items-center gap-5 p-2">
+            <div class="flex items-center gap-2 mt-3">
+              <img src="assets/activity.png" alt="" />
+              <h2>Activity Log</h2>
+            </div>
+            <button class="btn bg-blue-500 text-white border-none hover:bg-blue-400 hover:text-black">Clear History</button>
+          </div>
+
+          <div class="border-b-2 border-blue-200 border-dashed mt-6"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script/main.js"></script>
+  </body>
 </html>
